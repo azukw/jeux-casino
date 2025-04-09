@@ -4,7 +4,12 @@ from sys import exit
 from tkinter import Tk
 import ctypes as ct
 import time
+import os
 
+# Obtenir le chemin absolu du dossier du script
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Chemin vers le dossier images (un niveau au-dessus du dossier recttesgclas)
+IMAGES_DIR = os.path.join(os.path.dirname(SCRIPT_DIR), 'images')
 
 DEBUG = False
 FULLSCREEN = False
@@ -32,7 +37,7 @@ bet_on = True
 commence = False
 canbet = True
 reponse = 0  # Initialisation de la variable reponse
-pg.display.set_icon(pg.image.load('../images/logobg.png'))
+pg.display.set_icon(pg.image.load(os.path.join(IMAGES_DIR, 'logobg.png')))
 
 
 
@@ -84,10 +89,10 @@ class Gui():
             calc = calc*2
             x+=100
 
-        screen.blit(pg.image.load('../images/logobg2.png').convert_alpha(),(700,-70))
+        screen.blit(pg.image.load(os.path.join(IMAGES_DIR, 'logobg2.png')).convert_alpha(),(700,-70))
         pg.draw.rect(screen, (20,20,20), pg.Rect(770, 575, 380,60), border_radius=6)
         pg.draw.rect(screen, (20,20,20), pg.Rect(770, 675, 380,60), border_radius=6)
-        screen.blit(pg.transform.scale(pg.image.load('../images/yen.png').convert_alpha(),(50,50)),(850,400))
+        screen.blit(pg.transform.scale(pg.image.load(os.path.join(IMAGES_DIR, 'yen.png')).convert_alpha(),(50,50)),(850,400))
         screen.blit(self.text_screen,(910,390))
         screen.blit(self.text_screenbet,(965,570))
         screen.blit(self.text_screenwin,(965,670))
