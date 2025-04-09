@@ -6,7 +6,7 @@ Ce dépôt contient une collection de jeux de casino développés avec Python (P
 - [Wild West Gold](#wild-west-gold)
 - [Crash](#crash)
 - [Bingo](#bingo)
-- [Aim Trainer (FreeMonke)](#aim-trainer-freemonke)
+- [Aim Trainer](#aim-trainer)
 - [Jackpot](#jackpot)
 - [Pile ou Face](#pile-ou-face)
 
