@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    z-index: 20;
+    background: #6441a555;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 50px;
+    box-shadow: 0 0 20px #101010EE;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    overflow: hidden;
+}
+
+header .top{
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    bottom: 75px;
+}
+
+header .top h1{
+    position: relative;
+    left: 20px;
+    bottom: 5px;
+    text-transform: uppercase;
+    color: #000;
+    text-shadow: 0 0 100px #b9a3e3;
+    font-size: 2.75em;
+}
+
+header .top img{
+    position: relative;
+    bottom: 10px;
+    width: 70px;
+}
+
+header .back{
+    position: relative;
+    z-index: 10;
+    bottom: 5px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: #262626;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding-bottom: 21vh;
+    padding-top: 15.5vh;
+}
+
+section::before{
+    z-index: 0;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b9a3e3;
+    clip-path: circle(40% at 100% -5%);
+}
+
+section::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #6441a5;
+    clip-path: circle(35% at 0% 120%);
+}
+
+.container{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 550px;
+}
+
+#ct1{
+    position: relative;
+    top: -5em;
+    width: 300px;
+    height: 500px;
+    margin-bottom: -100px;
+}
+
+.container .card{
+    position: relative;
+    width: 90px;
+    height: 95px;
+    margin: 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: 0.2s ease-in-out;
+    
+}
+
+#ct1 .card{
+    width: 200px;
+    height: 210px;
+    overflow: hidden;
+    pointer-events: all;
+}
+
+#ct1 .card:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.container #middle{
+    background: rgba(255, 22, 22, 0.5);
+}
+
+.container #middle:hover{
+    background: rgba(255, 22, 22, 0.7);
+}
+
+.container .card .content{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.7rem;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card .content h2{
+    color: rgba(0, 0, 0, 1);
+    transition: 0.1s ease-out;
+}
+
+#ct1 .card h2{
+    font-size: 7em;
+    text-shadow: #aaa 0 0 100px;
+}
+
+.container .card:hover .content h2{
+    text-shadow: rgba(255, 255, 255, 0.2) 1px 1px 40px;
+}
+
+.container .card .content img{
+    width: 75%;
+}
+
+#bingobutton{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    min-width: 10em;
+    height: 3em;
+    margin: -190px 500px 0 500px;
+    border-radius: .5em;
+    background-color: rgba(255, 22, 22, 0.5);
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: all;
+    top: 2em;
+}
+
+#bingobutton:hover{
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+#bingobutton h2{
+    font-size: 2.2em;
+    transition: 0.3s ease-in-out;
+}
+
+#bingobutton:hover h2{
+    text-shadow: #000000aa 1px 1px 20px;
+}
+
+#refreshmsg{
+    color: #ddd;
+}
+
+#end{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    width: 100rem;
+    height: 100rem;
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.exitcross{
+    z-index: 12;
+    position: relative;
+    width: 40px;
+    bottom: 10em;
+    left: 34em;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+#cross2{
+    position: relative;
+    bottom: 3em;
+    left: 29em;
+}
+
+#endScreen{
+    z-index: 11;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35em;
+    height: 25em;
+    background-color: rgba(150, 140, 150, 0.9);
+    border-radius: 1em;
+    box-shadow: #000 0 0 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in;
+}
+
+#msgfin{
+    background-color: #ddd;
+    font-size: 5em;
+    color: #111;
+    padding: 0 0.5em 0 0.5em;
+    border-radius: 1em;
+}
+
+#chrono{
+    background: #a11;
+    position: relative;
+    padding: 0.2em 0.5em;
+    border-radius: .5em;
+    font-size: 1.5em;
+    width: 3.7em;
+    margin-left: .25em;
+    margin-right: .25em;
+    top: -1.35em;
+}
+
+#tirage{
+    transition: 1s ease;
+}
+
+#historique{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 0.2em 0.5em;
+    border-radius: .5em;
+    font-size: 1.75em;
+    width: 9em;
+    height: 2em;
+    top: -2.25em;
+    transition:  ease;
+}
+
+#historique p{
+    padding: .125em;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+#historique #hp1{
+    opacity: 1;
+}
+
+#historique #hp2{
+    opacity: 0.7;
+}
+
+#historique #hp3{
+    opacity: 0.6;
+}
+
+#historique #hp4{
+    opacity: 0.5;
+}
+
+#historique #hp5{
+    opacity: 0.4;
+}
+
+#reload{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    width: 100rem;
+    height: 100rem;
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    bottom: -15em;
+}
+
+#reloadScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    width: 15em;
+    height: 5em;
+    background-color: #6441a5;
+    border-radius: 1em;
+    color: #ddd;
+    font-size: 2em;
+    box-shadow: #000 0 0 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in;
+    flex-wrap: wrap;
+}
+
+#f5button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2em;
+    margin-left: 50px;
+    background-color: #ddd;
+    color: #111;
+    font-size: 0.75em;
+    border-radius: 30px;
+    border: solid #111 1.5px;
+    cursor: pointer;
+}
+
+.infos{
+    z-index: 11;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 12.5vh;
+    background-color: #6441a5;
+}
+
+.infos .footcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.infos .footcontainer .jauges{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 3em;
+    background-color: #ddd;
+    margin-right: 20px;
+    border: 2px #000 solid;
+    border-radius: 1em;
+}
+
+.infos .footcontainer .jauges h2{
+    font-size: 2ch;
+}
+
+.infos .footcontainer .bidbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 4em;
+    background-color: rgba(255, 30, 30, 0.9);
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px #000 solid;
+    border-radius: 3em;
+    transition: 0.5s;
+}
+
+.infos .footcontainer .bidbutton:hover{
+    background-color: #a11;
+    cursor: pointer;
+}
+
+.bet{
+    display: flex;
+    width: 23em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bet .controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3ch;
+    font-weight: 400;
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 2px #000 solid;
+    transition: 0.5s;
+}
+
+.bet .controls:hover{
+    background-color: #a33;
+    cursor: pointer;
+}
+
+.bet .controls h3{
+    position: relative;
+    left: 1px;
+    font-size: 2ch;
+    font-weight: 450;
+}
+
+#bet_money{
+    width: 10em;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Jackpot</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="description page">
+        <meta name="keywords" content="html css js bootstrap jquery">
+        <meta name="robots" content="index">
+        <meta name="REVISIT-AFTER" content="7 days">
+        <meta http-equiv="Content-Language" content="fr">
+        <meta http-equiv="Pragma" content="no-cache">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script type="text/javascript" src="java.js"></script>
+ 
+         
+    <body>
+    <center>
+        <p>JACKPOT</p>
+        <div id="outer-div">
+            <div class="inner-div">  
+                <table border="0">
+                    <tr>
+                        <td><img src="jackpoticons/7.png" width="150" height="180" alt="" /></td>
+                        <td><img src="jackpoticons/bar.jpg" width="150" height="180" alt="" /></td>
+                        <td><img src="jackpoticons/cherry.jpg" width="150" height="180" alt="" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <input type="button" onclick="alea()" value="Start">
+        </center>
+        <script type="text/javascript">
+            var tab = [];
+            tab.push('jackpoticons/7.png')
+            tab.push('jackpoticons/bar.png')
+            tab.push('jackpoticons/cherry.png')
+            tab.push('jackpoticons/orange.png')
+            tab.push('jackpoticons/prune.png')
+    
+            function alea(){
+                var img0 = tab[Math.floor((Math.random() * (tab.length - 1)))];
+                var img1 = tab[Math.floor((Math.random() * (tab.length - 1)))];
+                var img2 = tab[Math.floor((Math.random() * (tab.length - 1)))];
+    
+                $('#img0').attr('src',img0);
+                $('#img1').attr('src',img1);
+                $('#img2').attr('src',img2);
+    
+                if(img0 === img1 && img1 === img2){
+                    alert('Winner : 1 000 000 $ !');
+                }
+            }
+    
+            $(document).ready()
+            {
+                $('#launch').on('click',function(){
+                    alea();
+                });
+            }
+        </script> 
+</body>
+</html>

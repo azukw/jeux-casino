@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test User System</title>
+        <link rel="stylesheet" href="stylesheets/testusers_style.css">
+        <script src="scripts/testusers_script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#bottom">
+                <img src="images/monke.png" alt="M">
+                <h1>Monke Games</h1>
+            </a>
+        </header>
+        
+        <section>
+            <div id="allforms">
+                <div id="login_register">
+                    <h2 id="login" onclick="go_login();">LOGIN</h2>
+                    <h2 id="register" onclick="go_register();">REGISTER</h2>
+                </div>
+
+                <div id="formcontainer">
+                    <form action="" id="form_log">
+                        <div id="username_container">
+                            <h3 id="usertext">username</h3>
+                            <input id="log_user" type="text" name="username" class="entree" minlength="4" maxlength="20" onfocus="enter_user_login(0);" onblur="enter_user_login(1);">
+                        </div>
+
+                        <div class="password_container">
+                            <h3 id="passtext">password</h3>
+                            <input id="log_pw" type="password" name="log_password" class="entree" minlength="8" maxlength="20" onfocus="enter_password_login(0);" onblur="enter_password_login(1);">
+                            <div class="imgbx" onclick="eyes();">
+                                <img src="images/open_eye.png" alt="O_O" id="open_eye" class="eyes">
+                                <img src="images/close_eye.png" alt="X_X" id="close_eye" class="eyes">
+                            </div>
+                            <div id="boutton_log" class="bouton" onclick="login();">Login</div>
+                            <p id="msg"></p>
+                        </div>
+                    </form>
+
+                    <form id="form_reg">
+                        <div id="username_container">
+                            <h3 id="usertext2">username</h3>
+                            <input id="reg_user" type="text" name="username" class="entree" minlength="4" maxlength="20" onfocus="enter_user_register(0);" onblur="enter_user_register(1);">
+                        </div>
+
+                        <div class="password_container">
+                            <h3 id="passtext2">email</h3>
+                            <input id="reg_pw" type="text" name="email" class="entree" onfocus="enter_password_register(0);" onblur="enter_password_register(1);">
+                        </div>
+
+                        <div class="password_container">
+                            <h3 id="passtext3">password</h3>
+                            <input id="reg_pw2" type="password" name="password" class="entree" minlength="8" maxlength="20" onfocus="enter_password2_register(0);" onblur="enter_password2_register(1);">
+                            <div id="imgbx3" class="imgbx" onclick="eyes3();">
+                                <img src="images/open_eye.png" alt="O_O" id="open_eye3" class="eyes">
+                                <img src="images/close_eye.png" alt="X_X" id="close_eye3" class="eyes">
+                            </div>
+                            <div id="boutton_reg" class="bouton" onclick="register()">Register</div>
+                            <p id="msg2"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="info_text">
+                <h1>Monke Games</h1>
+                <p>developped by Paul-Adrien Troeira, Sami Saoud & Milo Gourvest</p>
+                <h4>No real money is used on this website</h4>
+                <h5>All the games are for entertainment purpose only</h5>
+                <h6>Don't spend too much time playing these games, even if they're using fake money, money games are extremelly addictive</h6>
+            </div>
+        </section>
+    </body>
+</html>

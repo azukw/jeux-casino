@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+header{
+    position: fixed;
+    z-index: 20;
+    background: #6441a555;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 50px;
+    box-shadow: 0 0 20px #101010EE;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    overflow: hidden;
+}
+
+header .top{
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    bottom: 75px;
+}
+
+header .top h1{
+    position: relative;
+    left: 20px;
+    bottom: 5px;
+    text-transform: uppercase;
+    color: #000;
+    text-shadow: 0 0 100px #b9a3e3;
+    font-size: 2.75em;
+}
+
+header .top img{
+    position: relative;
+    bottom: 10px;
+    width: 70px;
+}
+
+header .back{
+    position: relative;
+    z-index: 10;
+    bottom: 5px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #262626;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding-top: 70px;
+}
+
+.scoreboard{
+    position: absolute;
+    background: #b9a3e3bb;
+    padding: 5px 10px 5px 10px;
+    top: 0;
+    margin-top: 120px;
+    border-radius: 5px;
+}
+
+.scoreboard span:nth-child(1){
+    background: #b9a3e3ff;
+    padding: 2px 5px 2px 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.scoreboard span:nth-child(2){
+    background: #b9a3e3ff;
+    padding: 2px 5px 2px 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.machine{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.machine .card{
+    position: relative;
+    width: 140px;
+    height: 200px;
+    margin: 20px 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 6px;
+    transition: 0.75s;
+    overflow: hidden;
+}
+
+.machine .card .images{
+    width: 90%;
+    margin: 5%;
+}
+
+/*.machine .card:hover .images{
+    width: 90%;
+    margin: 5%;
+    animation: roll 3s infinite linear;
+}*/
+
+.machine .card img{
+    width: 100%;
+}
+
+@keyframes roll{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-2390px);
+    }
+}
+
+@keyframes stop{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

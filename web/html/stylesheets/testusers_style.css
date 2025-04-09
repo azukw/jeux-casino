@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    z-index: 20;
+    background: #6441a555;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 50px;
+    box-shadow: 0 0 20px #101010EE;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    overflow: hidden;
+}
+
+header a{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+header a h1{
+    position: relative;
+    left: 20px;
+    bottom: 5px;
+    text-transform: uppercase;
+    color: #000;
+    text-shadow: 0 0 100px #b9a3e3;
+    font-size: 2.75em;
+}
+
+header a img{
+    position: relative;
+    bottom: 10px;
+    width: 70px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #262626;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+section::before{
+    z-index: 0;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b9a3e3;
+    clip-path: circle(40% at 100% -5%);
+}
+
+section::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #6441a5;
+    clip-path: circle(35% at 0% 120%);
+}
+
+#allforms{
+    position: absolute;
+    width: screen;
+    height: screen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    top: 5em;
+}
+
+section .entree{
+    font-size: 1rem;
+    width: 24rem;
+    height: 2.5rem;
+    border-radius: 1em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+section .bouton{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    width: 6.5rem;
+    height: 3rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    border: 1px #222 solid;
+    user-select: none;
+    cursor: pointer;
+}
+
+section #login_register{
+    position: relative;
+    user-select: none;
+    left: 1em;
+}
+
+section #login_register h2{
+    color: #eee;
+    background-color: #6441a5;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    padding-right: 3rem;
+}
+
+section #login_register #login{
+    position: relative;
+    background-color: #6441a5;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 13;
+}
+
+section #login_register #login:hover{
+    position: relative;
+    transform: translateX(-5px);
+}
+
+section #login_register #register{
+    position: relative;
+    background-color: #b9a3e3;
+    transition: 0.3s;
+    left: 20px;
+    cursor: pointer;
+    z-index: 12;
+}
+
+section #login_register #register:hover{
+    position: relative;
+    transform: translateX(-5px);
+}
+
+#form_log{
+    position: relative;
+    z-index: 16;
+    background-color: #6441a5;
+    padding: 2rem 2rem 4rem 3rem;
+    border-radius: 2rem;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+#form_reg{
+    position: initial;
+    z-index: 15;
+    background-color: #b9a3e3;
+    padding: 2rem 2rem 4rem 3rem;
+    border-radius: 2rem;
+    opacity: 0;
+    visibility: visible;
+    bottom: 5px;
+}
+
+form h3{
+    user-select: none;
+}
+
+#usertext{
+    pointer-events: none;
+    user-select: none;
+    touch-action: none;
+    color: #888;
+    position: relative;
+    top: 1.85em;
+    left: 1em;
+    transition: 0.5s;
+}
+#passtext{
+    pointer-events: none;
+    user-select: none;
+    touch-action: none;
+    color: #888;
+    position: relative;
+    top: 1.85em;
+    left: 1em;
+    transition: 0.5s;
+}
+#usertext2{
+    pointer-events: none;
+    user-select: none;
+    touch-action: none;
+    color: #888;
+    position: relative;
+    top: 1.85em;
+    left: 1em;
+    transition: 0.5s;
+}
+#passtext2{
+    pointer-events: none;
+    user-select: none;
+    touch-action: none;
+    color: #888;
+    position: relative;
+    top: 1.85em;
+    left: 1em;
+    transition: 0.5s;
+}
+#passtext3{
+    pointer-events: none;
+    user-select: none;
+    touch-action: none;
+    color: #888;
+    position: relative;
+    top: 1.85em;
+    left: 1em;
+    transition: 0.5s;
+}
+
+#info_text{
+    z-index: 15;
+    position: absolute;
+    bottom: 1em;
+    margin: 1em;
+    font-size: 1.05rem;
+    width: 40.3em;
+    height: 10em;
+    background-color: #ff555588;
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    padding-top: 1rem;
+    visibility: visible;
+    text-align: center;
+}
+
+#info_text p{
+    font-size: 1ch;
+}
+
+#formcontainer{
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    flex-flow: column;
+}
+
+#formcontainer form{
+    position: relative;
+}
+
+#formcontainer #form_log{
+    transform: translateY(50%);
+}
+
+.imgbx{
+    position: fixed;
+    top: 9.4em;
+    right: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#imgbx2{
+    top: 9.5em;
+}
+
+#imgbx3{
+    top: 13.7em;
+}
+
+.eyes{
+    width: 30px;
+    position: absolute;
+    user-select: none;
+    filter: invert(0.25);
+}
+
+#open_eye{
+    opacity: 1;
+    visibility: visible;
+}
+
+#close_eye{
+    opacity: 1;
+    visibility: visible;
+}
+
+#formcontainer #form_reg{
+    transform: translateY(-50%);
+}
+
+.bouton{
+    position: relative;
+    margin-top: 3em;
+}
+
+@media screen and (max-width: 700px){
+    section{
+        min-height: 150vh;
+    }
+
+    #allforms{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #formcontainer{
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+    }
+
+    #login_register{
+        position: relative;
+        margin-top: 5em;
+        transform: translate(-36.25%, 145%);
+        display: flex;
+    }
+
+    #login_register #login{
+        margin: 0;
+        left: 0;
+        transform: translateX(-4.25%);
+        padding: 1em;
+        padding-bottom: 3em;
+        z-index: 13;
+        transition: 0.3s;
+    }
+
+    #login_register #login:hover{
+        bottom: 5px;
+    }
+
+    #login_register #register{
+        margin: 0;
+        transform: translateX(-3%);
+        padding: 1em;
+        z-index: 12;
+        transition: 0.3s;
+    }
+
+    #login_register #register:hover{
+        bottom: 5px;
+    }
+    
+    #form_log{
+        bottom: 3em;
+    }
+
+    #form_reg{
+        bottom: 13px;
+    }
+
+    #info_text{
+        position: absolute;
+        bottom: -15em;
+        width: 35em;
+    }
+}

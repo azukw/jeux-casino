@@ -1,0 +1,228 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monke Games : Bingo</title>
+    <script src="scripts/game3_script.js"></script>
+    <link rel="stylesheet" href="stylesheets/game3_style.css">  
+    <link rel="icon" href="images/monke.png">
+</head>
+<body>
+    <header>
+        <a href="games.html"><img src="images/backicon.png" alt="img" class="back"></a>
+        <a href="#top" class="top">
+            <img src="images/monke.png" alt="img">
+            <h1>monke games</h1>
+        </a>
+    </header>
+
+    <section>
+        <div class="container" id="ct1">
+            <div id="start" class="card">
+                <h2 id="tirage">#</h2>
+            </div>
+
+            <div id="chrono">00:00</div>
+
+            <div id="historique">
+                <p id="hp1"></p>
+                <p id="hp2"></p>
+                <p id="hp3"></p>
+                <p id="hp4"></p>
+                <p id="hp5"></p>
+            </div>
+
+            <div id="bingobutton" onclick="bingo_f()">
+                <h2>BINGO</h2>
+            </div>
+        </div>
+
+        <div class="container" id="ct2">
+            <div class="card" onclick="changeColor(this)" id="1">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="2">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="3">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="4">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="5">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="6">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="7">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="8">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="9">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="10">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="11">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="12">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" id="middle" onclick="reloadPage();">
+                <div class="content">
+                    <img src="images/star.png" alt="star">
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="14">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="15">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="16">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="17">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="18">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="19">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="20">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="21">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="22">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="23">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="24">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+
+            <div class="card" onclick="changeColor(this)" id="25">
+                <div class="content">
+                    <script language="javascript">randomNb();</script>
+                </div>
+            </div>
+        
+            <div id="refreshmsg">click the star to generate a new grid</div>
+        </div>
+
+        <div id="end">
+            <img class="exitcross" src="images/cross.png" alt="exit" onclick="exitEnd();">
+            <div id="endScreen">
+                <h2 id="msgfin"></h2>
+            </div>
+        </div>
+
+        <div id="reload">
+            <img class="exitcross" id="cross2" src="images/cross.png" alt="exit" onclick="exitReload();">
+            <div id="reloadScreen">New Grid ?
+                <div id="f5button" onclick="window.location.reload();">Yes</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="infos">
+        <div class="footcontainer">
+            <div class="jauges" id="wallet">
+                <h2>WALLET : <span id="wallet_money">100</span> MC</h2>
+            </div>
+            <div class="bidbutton" id="placebutton" onclick="game();"><h2>PLACE</h2></div>
+            <div class="bet">
+                <div class="jauges" id="place">
+                    <h2>BET : <span id="bet_money">10</span> MC</h2>
+                </div>
+
+                <div class="controls" id="more" onclick="betminus();"><h3>-</h3></div>
+                <div class="controls" id="minus" onclick="betmore();"><h3>+</h3></div>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
